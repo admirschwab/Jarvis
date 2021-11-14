@@ -1,0 +1,11 @@
+{
+	"name": "jarvis",
+	"version": "1.2.0",
+	"main": "src/index.js",
+	"author": "Ferotiq",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"discord.js": "^13.0.1"
+	}
+}
