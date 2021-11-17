@@ -2,7 +2,7 @@
 	"name": "jarvis",
 	"version": "1.2.0",
 	"main": "src/index.js",
-	"author": "Ferotiq",
+	"author": "admirschwab",
 	"license": "ISC",
 	"description": "",
 	"dependencies": {

@@ -20,20 +20,30 @@ fs.readdirSync("./src/Commands")
 		client.commands.set(command.name, command);
 	});
 
-client.on("ready", () => console.log("Bot ist Online :)"));
+client.on("ready", () => {
+	console.log(" ");
+	console.log("JARVIS ist Online :)");
+
+	client.user.setActivity("Mainframe || by Admir", {type:"PLAYING"});
+});
 
 client.on("messageCreate", message => {
-	if (message.author.bot) return;
 
+	if (message.author.bot) return;
 	if (!message.content.startsWith(config.prefix)) return;
 
 	const args = message.content.substring(config.prefix.length).split(/ +/);
-
 	const command = client.commands.find(cmd => cmd.name == args[0]);
 
-	if (!command) return message.reply(`**!${args[0]}** existiert nicht :satellite:`);
+	if (!command) return message.reply(`Der Command **!${args[0]}** existiert nicht :satellite:`);
+	
+	//Permission
+	const permission = message.member.permissions.has(command.permission, true);
+
+	if (!permission) return message.reply(`Du hast keine Berechtigung für den Command: \`${command.permission}\` `)
 
 	command.run(message, args, client);
+
 });
 
 client.login(config.token);
