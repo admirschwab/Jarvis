@@ -7,6 +7,8 @@ const Discord = require("discord.js");
 module.exports = new Command({
 	name: "stats",
 	description: "Details zum Bot",
+	permission: "SEND_MESSAGES",
+	
 	async run(message, args, client) {
 
 		const embed = new Discord.MessageEmbed()
@@ -16,7 +18,7 @@ module.exports = new Command({
 			.addFields(
 				{ name: 'Entwickler:', value: 'https://admirschwab.de' },
 				{ name: '\u200B', value: '\u200B' },
-				{ name: 'Name', value: 'JARVIS', inline: true },
+				{ name: 'Name', value: `${client.user.username}`, inline: true },
 				{ name: 'Version', value: '1.4.0', inline: true },
 				{ name: 'Prefix', value: '!', inline: true },
 			)
