@@ -1,6 +1,7 @@
 /** @format */
 
 const Command = require("../Structures/Command.js");
+const config = require("../Data/config.json")
 
 const Discord = require("discord.js");
 
@@ -16,11 +17,11 @@ module.exports = new Command({
 			.setTitle("Details:")
 			.setDescription("Hier findest du Details zum Discord Bot")
 			.addFields(
-				{ name: 'Entwickler:', value: 'https://admirschwab.de' },
+				{ name: 'Developer:', value: 'https://admirschwab.de' },
 				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Name', value: `${client.user.username}`, inline: true },
-				{ name: 'Version', value: '1.4.0', inline: true },
-				{ name: 'Prefix', value: '!', inline: true },
+				{ name: 'Version', value: `${config.ver}`, inline: true },
+				{ name: 'Prefix', value: `${config.PREFIX}`, inline: true },
 			)
 			.setTimestamp()
 			.setFooter("JARVIS || by Admir Schwab", 'https://admirschwab.de/assets/img/admirschwab.png')
