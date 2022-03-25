@@ -107,3 +107,4 @@ client.on("messageCreate", message => {
 
 //token
 client.login(config.TOKEN);
+
