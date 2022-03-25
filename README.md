@@ -4,10 +4,10 @@
 ---
 
 **Commands:**
-> Ping (Shows the ping of the Bot and the API) <br>
-> cls (Command to clear the chat) <br>
-> react (A command to get feedback of the Communitiy with a like response) <br>
-> stats (To get learn more about the bot) <br>
+- Ping (Shows the ping of the Bot and the API) <br>
+- cls (Command to clear the chat) <br>
+- react (A command to get feedback of the Communitiy with a like response) <br>
+- stats (To get learn more about the bot) <br>
 
 ---
 
